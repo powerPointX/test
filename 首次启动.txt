@@ -1,0 +1,13 @@
+首次启动非常麻烦,因为涉及到我以前没接触过的技术点,npm,node.js 等
+
+1.修改项目目录中 static/config/index-prod.js文件,修改后端接口请求地址:
+  window.SITE_CONFIG[‘baseUrl’]=‘http://192.168.9.145:8089/renren-fast’
+
+2.安装node.js(之前有安装,也出过很多问题)，
+  打包前端项目(以下安装通过管理员方式运行)
+    2.1.可'直接'打开cmd命令窗口执行:npm install -g cnpm --registry=https://registry.npm.taobao.org下载npm(这个是镜像地址)
+3.接下就可以用cnpm代替npm。
+  进入到项目根目录，执行webpack打包命令：cnpm install 和 cnpm run build --prod(build一般会报错,大多是一些东西没安装 ,按照他的报错信息安装差不多)
+4.启动服务 npm run dev
+
+  根目录下有个package.json文件  相当于pom.xml文件,前端的版本文件
